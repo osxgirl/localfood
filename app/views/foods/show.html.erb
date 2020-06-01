@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Business:</strong>
+  <%= @food.business %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @food.website %>
+</p>
+
+
+
+<%= form_tag food_path(@food.id), method: "delete" do %>
+  <%= submit_tag "Delete #{@food.business}" %>
+<% end %>
+
+<%= link_to 'Edit', edit_food_path(@food) %> •
+<%= link_to 'Back', foods_path %>

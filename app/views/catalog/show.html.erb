@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @food.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @food.description %>
+</p>
+
+<%= form_tag food_path(@food.id), method: "delete" do %>
+  <%= submit_tag "Delete #{@food.title}" %>
+<% end %>
+
+<%= button_to "Delete", food_path(@food), method: :delete,
+data: { confirm: "Are you sure?" } %>
+
+<%= link_to 'Edit', edit_food_path(@food) %> •
+<%= link_to 'Back', foods_path %>
