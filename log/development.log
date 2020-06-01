@@ -19652,3 +19652,2571 @@ bin/spring:15:in `require'
 bin/spring:15:in `<top (required)>'
 bin/rails:3:in `load'
 bin/rails:3:in `<main>'
+Started GET "/drinks" for ::1 at 2020-06-01 17:15:42 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/ef7108053e5b9522/variables" for ::1 at 2020-06-01 17:15:42 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Drinks (20200601211204)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "drinks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "business" varchar, "website" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200601211204"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/drinks" for ::1 at 2020-06-01 17:15:58 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/drinks"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks" for ::1 at 2020-06-01 17:16:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/drinks"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/rails/info/routes?path=\" for ::1 at 2020-06-01 17:16:05 -0400
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"\\"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1899)
+
+
+Started GET "/rails/info/routes?path=\" for ::1 at 2020-06-01 17:16:06 -0400
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"\\"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 645)
+
+
+Started GET "/drinks" for ::1 at 2020-06-01 17:17:08 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1537)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.5ms | Allocations: 6545)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:17:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks/new" for ::1 at 2020-06-01 17:17:13 -0400
+Processing by DrinksController#new as HTML
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 473.3ms | Allocations: 202879)
+  Rendered drinks/new.html.erb within layouts/application (Duration: 475.3ms | Allocations: 203209)
+Completed 500 Internal Server Error in 482ms (ActiveRecord: 0.7ms | Allocations: 206918)
+
+
+
+ActionView::Template::Error - undefined local variable or method `drink' for #<#<Class:0x00007fc1f0ea1668>:0x00007fc1f07afe90>
+Did you mean?  @drink:
+  app/views/drinks/_form.html.erb:2:in `view template'
+  app/views/drinks/new.html.erb:3
+
+Started POST "/__better_errors/b2d2cbf435b88ff0/variables" for ::1 at 2020-06-01 17:17:14 -0400
+Started GET "/drinks/new" for ::1 at 2020-06-01 17:17:55 -0400
+Processing by DrinksController#new as HTML
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 519.7ms | Allocations: 167537)
+  Rendered drinks/new.html.erb within layouts/application (Duration: 520.8ms | Allocations: 167870)
+Completed 500 Internal Server Error in 524ms (ActiveRecord: 0.0ms | Allocations: 168885)
+
+
+
+ActionView::Template::Error - undefined local variable or method `drink' for #<#<Class:0x00007fc1fb044fd8>:0x00007fc1fb057728>
+Did you mean?  @drink:
+  app/views/drinks/_form.html.erb:1:in `view template'
+  app/views/drinks/new.html.erb:3
+
+Started POST "/__better_errors/a280de95e4c6cf77/variables" for ::1 at 2020-06-01 17:17:56 -0400
+Started POST "/__better_errors/a280de95e4c6cf77/variables" for ::1 at 2020-06-01 17:18:16 -0400
+Started POST "/__better_errors/a280de95e4c6cf77/variables" for ::1 at 2020-06-01 17:18:17 -0400
+Started POST "/__better_errors/a280de95e4c6cf77/variables" for ::1 at 2020-06-01 17:18:19 -0400
+Started GET "/drinks/new" for ::1 at 2020-06-01 17:18:34 -0400
+Processing by DrinksController#new as HTML
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 19.4ms | Allocations: 9069)
+  Rendered drinks/new.html.erb within layouts/application (Duration: 20.5ms | Allocations: 9422)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 12348)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:18:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks/new" for ::1 at 2020-06-01 17:18:57 -0400
+Processing by DrinksController#new as HTML
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 1.9ms | Allocations: 1195)
+  Rendered drinks/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1542)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4460)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:18:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks/new" for ::1 at 2020-06-01 17:20:12 -0400
+Processing by DrinksController#new as HTML
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 2.0ms | Allocations: 1195)
+  Rendered drinks/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1546)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 4465)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:20:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started POST "/drinks" for ::1 at 2020-06-01 17:20:15 -0400
+Processing by DrinksController#create as HTML
+  Parameters: {"authenticity_token"=>"yXqEBLn2LmrBHsGU3upW/SmEEf4r9LTjXo9OKL+xsll5U+8DbEDs6cJ3Kdjl0fXXhD07xkOck58XFixESMKLgw==", "drink"=>{"business"=>"1", "website"=>"1"}, "commit"=>"Create Drink"}
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 0.0ms | Allocations: 112258)
+
+
+
+NameError - undefined local variable or method `drink_params' for #<DrinksController:0x00007fc1f348b7c0>
+Did you mean?  drink_path:
+  app/controllers/drinks_controller.rb:27:in `create'
+
+Started POST "/__better_errors/3699200770844069/variables" for ::1 at 2020-06-01 17:20:16 -0400
+Started POST "/drinks" for ::1 at 2020-06-01 17:21:56 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DrinksController#create as HTML
+  Parameters: {"authenticity_token"=>"yXqEBLn2LmrBHsGU3upW/SmEEf4r9LTjXo9OKL+xsll5U+8DbEDs6cJ3Kdjl0fXXhD07xkOck58XFixESMKLgw==", "drink"=>{"business"=>"1", "website"=>"1"}, "commit"=>"Create Drink"}
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 0.0ms | Allocations: 123926)
+
+
+
+NameError - undefined local variable or method `drink_params' for #<DrinksController:0x00007fc1f0473dd0>
+Did you mean?  drink_path:
+  app/controllers/drinks_controller.rb:24:in `create'
+
+Started POST "/__better_errors/bf5e61ae61177548/variables" for ::1 at 2020-06-01 17:21:57 -0400
+Started POST "/drinks" for ::1 at 2020-06-01 17:26:06 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DrinksController#create as HTML
+  Parameters: {"authenticity_token"=>"yXqEBLn2LmrBHsGU3upW/SmEEf4r9LTjXo9OKL+xsll5U+8DbEDs6cJ3Kdjl0fXXhD07xkOck58XFixESMKLgw==", "drink"=>{"business"=>"1", "website"=>"1"}, "commit"=>"Create Drink"}
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 0.0ms | Allocations: 123926)
+
+
+
+NameError - undefined local variable or method `drink_params' for #<DrinksController:0x00007fc1f0c67960>
+Did you mean?  drink_path:
+  app/controllers/drinks_controller.rb:24:in `create'
+
+Started POST "/__better_errors/30cfc1a109f85dab/variables" for ::1 at 2020-06-01 17:26:07 -0400
+Started GET "/drinks" for ::1 at 2020-06-01 17:26:11 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1594)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.5ms | Allocations: 4555)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:26:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks/new" for ::1 at 2020-06-01 17:26:13 -0400
+Processing by DrinksController#new as HTML
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 2.8ms | Allocations: 1245)
+  Rendered drinks/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1590)
+Completed 200 OK in 16ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 6767)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:26:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started POST "/drinks" for ::1 at 2020-06-01 17:26:16 -0400
+Processing by DrinksController#create as HTML
+  Parameters: {"authenticity_token"=>"LktG9BfZ1g8RsXXrq0Guj1luuKVaUP4ow45oQogcRmWeYi3zwm8UjBLYnaeQeg2l9NeSnTI42VSKFwouf29/vw==", "drink"=>{"business"=>"1", "website"=>"1"}, "commit"=>"Create Drink"}
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 0.0ms | Allocations: 123636)
+
+
+
+NameError - undefined local variable or method `drink_params' for #<DrinksController:0x00007fc1f07675c8>
+Did you mean?  drink_path:
+  app/controllers/drinks_controller.rb:24:in `create'
+
+Started POST "/__better_errors/47e75250f842d1c5/variables" for ::1 at 2020-06-01 17:26:16 -0400
+Started POST "/__better_errors/47e75250f842d1c5/variables" for ::1 at 2020-06-01 17:28:49 -0400
+Started POST "/drinks" for ::1 at 2020-06-01 17:28:52 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DrinksController#create as HTML
+  Parameters: {"authenticity_token"=>"LktG9BfZ1g8RsXXrq0Guj1luuKVaUP4ow45oQogcRmWeYi3zwm8UjBLYnaeQeg2l9NeSnTI42VSKFwouf29/vw==", "drink"=>{"business"=>"1", "website"=>"1"}, "commit"=>"Create Drink"}
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 0.0ms | Allocations: 124330)
+
+
+
+NameError - undefined local variable or method `drink_params' for #<DrinksController:0x00007fc1f022fda8>
+Did you mean?  drink_path:
+  app/controllers/drinks_controller.rb:24:in `create'
+
+Started POST "/__better_errors/589eb3f7f9354f68/variables" for ::1 at 2020-06-01 17:28:53 -0400
+Started POST "/drinks" for ::1 at 2020-06-01 17:30:36 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DrinksController#create as HTML
+  Parameters: {"authenticity_token"=>"LktG9BfZ1g8RsXXrq0Guj1luuKVaUP4ow45oQogcRmWeYi3zwm8UjBLYnaeQeg2l9NeSnTI42VSKFwouf29/vw==", "drink"=>{"business"=>"1", "website"=>"1"}, "commit"=>"Create Drink"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1469)
+
+
+
+ActiveRecord::StatementInvalid - Could not find table 'drinks':
+  app/controllers/drinks_controller.rb:24:in `create'
+
+Started POST "/__better_errors/d9bdfbb7d9d86917/variables" for ::1 at 2020-06-01 17:30:36 -0400
+Started GET "/drinks" for ::1 at 2020-06-01 17:30:39 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (1.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3580)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.2ms | Allocations: 4031)
+
+
+
+ActionView::Template::Error - SQLite3::SQLException: no such table: drinks:
+  app/views/drinks/index.html.erb:16:in `view template'
+
+Started POST "/__better_errors/34fc6aa512caae72/variables" for ::1 at 2020-06-01 17:30:39 -0400
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/drinks" for ::1 at 2020-06-01 17:30:43 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 3546)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.0ms | Allocations: 3819)
+
+
+
+ActionView::Template::Error - SQLite3::SQLException: no such table: drinks:
+  app/views/drinks/index.html.erb:16:in `view template'
+
+Started POST "/__better_errors/be67efd028c956a9/variables" for ::1 at 2020-06-01 17:30:43 -0400
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/drink" for ::1 at 2020-06-01 17:30:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/drink"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks" for ::1 at 2020-06-01 17:30:48 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (1.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 3546)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.5ms | Allocations: 3819)
+
+
+
+ActionView::Template::Error - SQLite3::SQLException: no such table: drinks:
+  app/views/drinks/index.html.erb:16:in `view template'
+
+Started POST "/__better_errors/a5c562e9a3495c5a/variables" for ::1 at 2020-06-01 17:30:48 -0400
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/drinks" for ::1 at 2020-06-01 17:31:23 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  Rendered drinks/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2573)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3964)
+
+
+
+ActionView::Template::Error - undefined method `each' for nil:NilClass:
+  app/views/drinks/index.html.erb:16:in `view template'
+
+Started POST "/__better_errors/83899aca86c686ac/variables" for ::1 at 2020-06-01 17:31:23 -0400
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/drinks" for ::1 at 2020-06-01 17:32:10 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3811)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.0ms | Allocations: 4820)
+
+
+
+ActionView::Template::Error - SQLite3::SQLException: no such table: drinks:
+  app/views/drinks/index.html.erb:16:in `view template'
+
+Started POST "/__better_errors/c3de2bdb3f047a82/variables" for ::1 at 2020-06-01 17:32:10 -0400
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/drinks" for ::1 at 2020-06-01 17:33:50 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/d7b3a0ebd5c22035/variables" for ::1 at 2020-06-01 17:33:50 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Foods (20200524215308)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "foods" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "business" varchar, "website" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200524215308"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to Drinks (20200601211204)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "drinks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "business" varchar, "website" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200601211204"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-01 21:34:01.989561"], ["updated_at", "2020-06-01 21:34:01.989561"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/drinks" for ::1 at 2020-06-01 17:34:09 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.3ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2202)
+Completed 200 OK in 28ms (Views: 22.5ms | ActiveRecord: 0.6ms | Allocations: 10909)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:34:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks/new" for ::1 at 2020-06-01 17:34:11 -0400
+Processing by DrinksController#new as HTML
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 5.2ms | Allocations: 2730)
+  Rendered drinks/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3079)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.5ms | Allocations: 8475)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:34:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started POST "/drinks" for ::1 at 2020-06-01 17:34:14 -0400
+Processing by DrinksController#create as HTML
+  Parameters: {"authenticity_token"=>"TqqZTL/KLvzmRuvuxTVo50YQWixmZW7tzoV79B0o3CL+g/JLanzsf+UvA6L+DsvN66lwFA4NSZGHHBmY6lvl+A==", "drink"=>{"business"=>"1", "website"=>"1"}, "commit"=>"Create Drink"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+  [1m[36mDrink Create (0.6ms)[0m  [1m[32mINSERT INTO "drinks" ("business", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["business", "1"], ["website", "1"], ["created_at", "2020-06-01 21:34:14.079582"], ["updated_at", "2020-06-01 21:34:14.079582"]]
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/drinks/1
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms | Allocations: 3017)
+
+
+Started GET "/drinks/1" for ::1 at 2020-06-01 17:34:14 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:58:in `set_drink'
+  Rendering drinks/show.html.erb within layouts/application
+  Rendered drinks/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 685)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 3788)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:34:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started DELETE "/drinks.1" for ::1 at 2020-06-01 17:34:15 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/drinks.1"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/application.js" for ::1 at 2020-06-01 17:35:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started DELETE "/drinks.1" for ::1 at 2020-06-01 17:35:54 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/drinks.1"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started DELETE "/drinks.1" for ::1 at 2020-06-01 17:35:57 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/drinks.1"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks.1" for ::1 at 2020-06-01 17:35:59 -0400
+Processing by DrinksController#index as 
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1231)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 4235)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:35:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks/1" for ::1 at 2020-06-01 17:36:01 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:58:in `set_drink'
+  Rendering drinks/show.html.erb within layouts/application
+  Rendered drinks/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 635)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 3312)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started DELETE "/drinks/1" for ::1 at 2020-06-01 17:36:02 -0400
+Processing by DrinksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FbMymLgbOiWprUaHdVV1EfRzJa7JB5g45S84kXr1vtlR5s19HYDpDtMopp3r02U827WDUqhfly5P8zkfoOD/Ng==", "commit"=>"Delete 1", "id"=>"1"}
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:58:in `set_drink'
+  [1m[36mCACHE Drink Load (0.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+  [1m[36mDrink Destroy (0.4ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/drinks
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms | Allocations: 3400)
+
+
+Started GET "/drinks" for ::1 at 2020-06-01 17:36:02 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 827)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 2904)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks/new" for ::1 at 2020-06-01 17:36:04 -0400
+Processing by DrinksController#new as HTML
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 2.2ms | Allocations: 1195)
+  Rendered drinks/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1540)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 3648)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started POST "/drinks" for ::1 at 2020-06-01 17:36:07 -0400
+Processing by DrinksController#create as HTML
+  Parameters: {"authenticity_token"=>"9WFDnIoobNPWnC33FX0jMU45FaOgwLdghXvaaouvVMBFSCibX56uUNX1xbsuRoAb44A/m8iokBzM4rgGfNxtGg==", "drink"=>{"business"=>"1", "website"=>"1"}, "commit"=>"Create Drink"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+  [1m[36mDrink Create (0.4ms)[0m  [1m[32mINSERT INTO "drinks" ("business", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["business", "1"], ["website", "1"], ["created_at", "2020-06-01 21:36:07.325038"], ["updated_at", "2020-06-01 21:36:07.325038"]]
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/drinks/2
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms | Allocations: 2759)
+
+
+Started GET "/drinks/2" for ::1 at 2020-06-01 17:36:07 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDrink Load (0.1ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:58:in `set_drink'
+  Rendering drinks/show.html.erb within layouts/application
+  Rendered drinks/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 414)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 2948)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started DELETE "/drinks/2" for ::1 at 2020-06-01 17:36:08 -0400
+Processing by DrinksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Qe+CDYOeRhAHGsjV5czIf1bzKFxJFfwDzvZC+Lz7tY9KDTVsgUs5HUmOOJnJ3juTDZ0Mfti4dfFp5GJRtKdLrw==", "commit"=>"Delete 1", "id"=>"2"}
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:58:in `set_drink'
+  [1m[36mCACHE Drink Load (0.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+  [1m[36mDrink Destroy (0.4ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/drinks
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms | Allocations: 3378)
+
+
+Started GET "/drinks" for ::1 at 2020-06-01 17:36:08 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.1ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 828)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 2792)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks/new" for ::1 at 2020-06-01 17:36:09 -0400
+Processing by DrinksController#new as HTML
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 1.8ms | Allocations: 868)
+  Rendered drinks/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 955)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 2922)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks" for ::1 at 2020-06-01 17:36:11 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.1ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 828)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 2792)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks/new" for ::1 at 2020-06-01 17:36:13 -0400
+Processing by DrinksController#new as HTML
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 1.5ms | Allocations: 870)
+  Rendered drinks/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 957)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 2924)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started POST "/drinks" for ::1 at 2020-06-01 17:36:21 -0400
+Processing by DrinksController#create as HTML
+  Parameters: {"authenticity_token"=>"/ECEYzX+nlf4CVHekB89QXy3pga8W0l47CxLpsaXFPBMae9k4Ehc1PtguZKrJJ5r0Q6MPtQzbgSltSnKMeQtKg==", "drink"=>{"business"=>"Starbuvks", "website"=>".com"}, "commit"=>"Create Drink"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+  [1m[36mDrink Create (0.5ms)[0m  [1m[32mINSERT INTO "drinks" ("business", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["business", "Starbuvks"], ["website", ".com"], ["created_at", "2020-06-01 21:36:21.220062"], ["updated_at", "2020-06-01 21:36:21.220062"]]
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/drinks/3
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms | Allocations: 2762)
+
+
+Started GET "/drinks/3" for ::1 at 2020-06-01 17:36:21 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:58:in `set_drink'
+  Rendering drinks/show.html.erb within layouts/application
+  Rendered drinks/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 408)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 5705)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started DELETE "/drinks/3" for ::1 at 2020-06-01 17:36:24 -0400
+Processing by DrinksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5OJVAzkhSO0lnyfro2G6rGN+KbgYbH1Jdz8V9VoFNd8XyKZZxFlzpQGHUfifXmfhFu8Aiz+8m/cU+vN/Y+qWEw==", "commit"=>"Delete Starbuvks", "id"=>"3"}
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:58:in `set_drink'
+  [1m[36mCACHE Drink Load (0.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+  [1m[36mDrink Destroy (0.4ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drinks_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/drinks
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms | Allocations: 3377)
+
+
+Started GET "/drinks" for ::1 at 2020-06-01 17:36:24 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.1ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/drinks/index.html.erb:16
+  Rendered drinks/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 829)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 2793)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks/new" for ::1 at 2020-06-01 17:36:28 -0400
+Processing by DrinksController#new as HTML
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 1.9ms | Allocations: 863)
+  Rendered drinks/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 950)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 2915)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started POST "/drinks" for ::1 at 2020-06-01 17:36:46 -0400
+Processing by DrinksController#create as HTML
+  Parameters: {"authenticity_token"=>"4tVnhkdayKjOc0m0Wlfne+ooAVkkMhWdlKD0Zn8QuaVS/AyBkuwKK80aofhhbERRR5ErYUxaMuHdOZYKiGOAfw==", "drink"=>{"business"=>"Starbucks", "website"=>"☕️"}, "commit"=>"Create Drink"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+  [1m[36mDrink Create (0.6ms)[0m  [1m[32mINSERT INTO "drinks" ("business", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["business", "Starbucks"], ["website", "☕️"], ["created_at", "2020-06-01 21:36:46.295629"], ["updated_at", "2020-06-01 21:36:46.295629"]]
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drinks_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/drinks/4
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms | Allocations: 2766)
+
+
+Started GET "/drinks/4" for ::1 at 2020-06-01 17:36:46 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDrink Load (0.1ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:58:in `set_drink'
+  Rendering drinks/show.html.erb within layouts/application
+  Rendered drinks/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 406)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 2940)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/drinks/4/edit" for ::1 at 2020-06-01 17:36:48 -0400
+Processing by DrinksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:58:in `set_drink'
+  Rendering drinks/edit.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (Duration: 1.6ms | Allocations: 937)
+  Rendered drinks/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1195)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 3869)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started PATCH "/drinks/4" for ::1 at 2020-06-01 17:36:52 -0400
+Processing by DrinksController#update as HTML
+  Parameters: {"authenticity_token"=>"huPZK9wTrMYfU5z/y+KfZY/bzjnQ11J73RmOgBpfpeaciv1fQOXgE5bV2rhuXUm7znPoPDjRfHOQ3kxoV5Rhbw==", "drink"=>{"business"=>"Starbucks", "website"=>"☕️ + Edit"}, "commit"=>"Update Drink", "id"=>"4"}
+  [1m[36mDrink Load (0.3ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:58:in `set_drink'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drinks_controller.rb:40:in `block in update'
+  [1m[36mDrink Update (0.4ms)[0m  [1m[33mUPDATE "drinks" SET "website" = ?, "updated_at" = ? WHERE "drinks"."id" = ?[0m  [["website", "☕️ + Edit"], ["updated_at", "2020-06-01 21:36:52.720684"], ["id", 4]]
+  ↳ app/controllers/drinks_controller.rb:40:in `block in update'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drinks_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/drinks/4
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms | Allocations: 3499)
+
+
+Started GET "/drinks/4" for ::1 at 2020-06-01 17:36:52 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:58:in `set_drink'
+  Rendering drinks/show.html.erb within layouts/application
+  Rendered drinks/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 406)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 2941)
+
+
+Started GET "/application.js" for ::1 at 2020-06-01 17:36:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/application.js"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.2.2) lib/rack/handler/thin.rb:22:in `run'
+rack (2.2.2) lib/rack/server.rb:327:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:39:in `start'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `tap'
+railties (6.0.3.1) lib/rails/commands/server/server_command.rb:138:in `perform'
+thor (1.0.1) lib/thor/command.rb:27:in `run'
+thor (1.0.1) lib/thor/invocation.rb:127:in `invoke_command'
+thor (1.0.1) lib/thor.rb:392:in `dispatch'
+railties (6.0.3.1) lib/rails/command/base.rb:69:in `perform'
+railties (6.0.3.1) lib/rails/command.rb:46:in `invoke'
+railties (6.0.3.1) lib/rails/commands.rb:18:in `<main>'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `block in require'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:291:in `load_dependency'
+activesupport (6.0.3.1) lib/active_support/dependencies.rb:324:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `load'
+spring (2.1.0) lib/spring/client/rails.rb:28:in `call'
+spring (2.1.0) lib/spring/client/command.rb:7:in `call'
+spring (2.1.0) lib/spring/client.rb:30:in `run'
+spring (2.1.0) bin/spring:49:in `<top (required)>'
+spring (2.1.0) lib/spring/binstub.rb:11:in `load'
+spring (2.1.0) lib/spring/binstub.rb:11:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
