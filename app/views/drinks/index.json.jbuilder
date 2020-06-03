@@ -1,1 +1,1 @@
-json.array! @foods, partial: "foods/food", as: :food
+json.array! @drinks, partial: "drinks/drink", as: :drink
