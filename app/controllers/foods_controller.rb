@@ -1,28 +1,21 @@
 class FoodsController < ApplicationController
-  before_action :set_food, only: [:show, :edit, :update, :destroy]
 
-  # GET /foods
-  # GET /foods.json
   def index
     @foods = Food.all
   end
 
-  # GET /foods/1
-  # GET /foods/1.json
   def show
+    @food = Food.find(params[:id])
   end
 
-  # GET /foods/new
   def new
     @food = Food.new
+    @food.items.build
   end
 
-  # GET /foods/1/edit
   def edit
   end
-
-  # POST /foods
-  # POST /foods.json
+  
   def create
     @food = Food.new(food_params)
 
@@ -36,9 +29,7 @@ class FoodsController < ApplicationController
       end
     end
   end
-
-  # PATCH/PUT /foods/1
-  # PATCH/PUT /foods/1.json
+  
   def update
     respond_to do |format|
       if @food.update(food_params)
@@ -51,30 +42,25 @@ class FoodsController < ApplicationController
     end
   end
 
-  # DELETE /foods/1
-  # DELETE /foods/1.json
-  
   def destroy
      Food.find(params[:id]).destroy
      redirect_to foods_url
-   end
+  end
   
-#  def destroy
-#      Food.find(params[:id]).destroy
-#      respond_to do |format|
-#      format.html { redirect_to foods_url, notice: 'Food Vendor was successfully destroyed.' }
-#      format.json { head :no_content }
-#    end
-#  end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_food
       @food = Food.find(params[:id])
     end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
+    
     def food_params
-      params.require(:food).permit(:business, :website)
+          params.require(:food).permit( :business,
+          :website,
+          items_attributes: [
+            :item_1,
+            :items_type
+          ]
+        )
     end
 end

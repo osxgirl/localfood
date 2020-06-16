@@ -10,7 +10,15 @@
   <%= @food.website %>
 </p>
 
+<p>
+  <strong>Item:</strong>
+  <ul>
+    <% @food.items.each do |item| %>
+      <li> <%= item.item_1 %>
+    <% end %>
+  </ul>
 
+</p>
 
 <%= form_tag food_path(@food.id), method: "delete" do %>
   <%= submit_tag "Delete #{@food.business}" %>

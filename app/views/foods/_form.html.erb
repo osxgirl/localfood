@@ -1,27 +1,19 @@
-<%= form_with(model: food, local: true) do |form| %>
-  <% if food.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(food.errors.count, "error") %> prohibited this food from being saved:</h2>
+<%= form_for @food do |f| %>
 
-      <ul>
-        <% food.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+<%= f.label :business %>
+<%= f.text_field :business %>
+<%= f.label :website %>
+<%= f.text_area :website %>
+
+  <%= f.fields_for :items do |items| %>
+  <%= f.label :Item %>
+    <%= items.text_field :item_1 %>
   <% end %>
 
-  <div class="field">
-    <%= form.label :business %>
-    <%= form.text_field :business %>
-  </div>
 
-  <div class="field">
-    <%= form.label :website %>
-    <%= form.text_area :website %>
-  </div>
+
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>

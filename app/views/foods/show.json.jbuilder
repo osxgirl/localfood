@@ -1,1 +1,1 @@
-json.partial! "foods/post", food: @food
+json.partial! "foods/food", food: @food
