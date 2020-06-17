@@ -14,6 +14,7 @@ class FoodsController < ApplicationController
   end
 
   def edit
+    @food = Food.find(params[:id])
   end
   
   def create
@@ -31,15 +32,18 @@ class FoodsController < ApplicationController
   end
   
   def update
-    respond_to do |format|
-      if @food.update(food_params)
-        format.html { redirect_to @food, notice: 'Food Vendor was successfully updated.' }
-        format.json { render :show, status: :ok, location: @food }
-      else
-        format.html { render :edit }
-        format.json { render json: @food.errors, status: :unprocessable_entity }
-      end
-    end
+    @food = Food.find(params[:id])
+    @food.update(business: params[:food][:business], website: params[:food][:website])
+    redirect_to food_path(@food)
+#    respond_to do |format|
+#      if @food.update(food_params)
+#        format.html { redirect_to @food, notice: 'Food Vendor was successfully updated.' }
+#        format.json { render :show, status: :ok, location: @food }
+#      else
+#        format.html { render :edit }
+#        format.json { render json: @food.errors, status: :unprocessable_entity }
+#      end
+#    end
   end
 
   def destroy

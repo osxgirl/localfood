@@ -1,12 +1,12 @@
 <%= form_for @food do |f| %>
 
 <%= f.label :business %>
-<%= f.text_field :business %>
+<%= f.text_field :business %><br>
 <%= f.label :website %>
-<%= f.text_area :website %>
+<%= f.text_field :website %><br>
 
   <%= f.fields_for :items do |items| %>
-  <%= f.label :Item %>
+  <%= f.label :Items %>
     <%= items.text_field :item_1 %>
   <% end %>
 
