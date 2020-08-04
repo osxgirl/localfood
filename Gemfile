@@ -25,7 +25,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # bootstrap
 
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '3.4.1'
 
 # session
 
