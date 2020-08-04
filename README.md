@@ -1,7 +1,7 @@
 # Local Food
 
 ## Instructions
-* Create a user account or login with your Github or Twitter accounts.
+* Create a user account or login with your Github or Twitter account.
 
-Save a local food business + a favorite. Saving a list of companies as well as their website, a rating and 1 item. 
+Save a local food business plus + add a favorite. Save a list of businesses as well as their website, a rating and your favorite item. 
 
